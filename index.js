@@ -94,21 +94,14 @@ function interpretaMensagem(message) {
 
 	if (ehR) {
 		console.log(`TODO: precisa fazer o reset pra ${x}, ${y}`);
-	}	else if (ehN) {
-		console.log(`TODO: nova posicao ${x}, ${y}`);
+		return;
 	}
 
-	// remove esse lixo aqui, faz ele em outro lugar
-
-	if (x >= safezone.x && x <= safezone.x + safezone.width && y >= safezone.y && y <= safezone.y + safezone.height) {
-		// checa isso no render, ao invés de x e y, usa doggo.x e doggo.y
-
-		// Draw the image at the new coordinates (x, y) within the safe zone
-	} else {
-
-		// NAO DESENHA A SETA AQUI DESENHA NO RENDER
-
+	if (doggo.x > 25) {
+		console.log('saiu da area');
 	}
+
+	window.requestAnimationFrame(render);
 }
 
 
